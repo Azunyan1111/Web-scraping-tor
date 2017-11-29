@@ -2,7 +2,7 @@ setup:
 	go get ./...
 
 start-tor:
-	tor -f tor/torrc1 &
+	go run StartTor.go
 
 stop-tor:
 	killall tor
