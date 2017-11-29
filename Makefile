@@ -3,6 +3,8 @@ setup:
 
 start-tor:
 	go run StartTor.go
+	echo 'Tor service setup. please wait and check conection'
+	echo 'curl --socks5 localhost:9001 http://ipinfo.io/'w
 
 stop-tor:
 	killall tor
