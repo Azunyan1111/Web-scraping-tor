@@ -15,5 +15,12 @@ make setup
 ### start
 
 ```.sh
-make start
+make start-tor  # start all tor service
+make start      # start web scraping
+```
+
+### stop
+
+```.sh
+make stop-tor # stop all tor service
 ```
