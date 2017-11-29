@@ -23,5 +23,5 @@ make start      # start web scraping
 ### stop
 
 ```.sh
-make stop-tor # stop all tor service
+make stop # stop all tor service
 ```
