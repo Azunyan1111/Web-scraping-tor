@@ -5,6 +5,7 @@
 Install
 ```
 brew install chromedriver
+export MAX_DRIVER=10        # browser count
 ```
 
 setup

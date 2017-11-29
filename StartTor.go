@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	i := 10
-	for i > 0{
+	i,_ := strconv.Atoi(os.Getenv("MAX_DRIVER"))
+	for i > 0{S
 		i--
 		// ポート番号生成
 		s := strconv.Itoa(9000 + i)
