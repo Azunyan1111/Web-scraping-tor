@@ -20,15 +20,20 @@ func main() {
 		go func(i int){
 			defer sy.Done()
 			s := strconv.Itoa(9000 + i)
-			driver := agouti.ChromeDriver(
-				agouti.ChromeOptions("args", []string{"--headless", "--disable-gpu",
-					"--proxy-server=socks5://localhost:" + s}),
-			)
+			driver := agouti.Selenium(agouti.ChromeOptions("args", []string{"--headless", "--disable-gpu",
+			"--proxy-server=socks5://localhost:" + s}))
+			//command := []string{"phantomjs", "--webdriver={{.Address}} --proxy-server=socks5://localhost:" + s}
+			//driver := agouti.NewWebDriver("http://{{.Address}}", command)
+			//agouti.ChromeOptions()
+			//driver := agouti.ChromeDriver(
+			//	agouti.ChromeOptions("args", []string{"--headless", "--disable-gpu",
+			//		"--proxy-server=socks5://localhost:" + s}),
+			//)
 			if err := driver.Start(); err != nil {
 				log.Fatalf("Failed to start driver:%v", err)
 			}
 			defer driver.Stop()
-			page, err := driver.NewPage(agouti.Browser("chrome"))
+			page, err := driver.NewPage(agouti.Browser("phantomjs"))
 			if err != nil {
 				log.Fatalf("Failed to open page:%v", err)
 			}
