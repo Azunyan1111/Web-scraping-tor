@@ -11,6 +11,14 @@ brew install chromedriver
 export MAX_DRIVER=10        # browser count
 ```
 
+rpi phantomjs mode
+```
+sudo apt-get install libfontconfig1 libfreetype6 libpng12-0
+curl -o /tmp/phantomjs -sSL https://github.com/fg2it/phantomjs-on-raspberry/releases/download/v2.1.1-wheezy-jessie/phantomjs
+sudo mv /tmp/phantomjs /usr/local/bin/phantomjs
+sudo chmod a+x /usr/local/bin/phantomjs
+```
+
 setup
 ```.sh
 make setup
