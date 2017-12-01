@@ -3,9 +3,9 @@ setup:
 
 start-tor:
 	go run main/StartTor.go
+	ps aux | grep 'tor -socksport'
 	export MAX_DRIVER=10
 	source ~/.bashrc
-	ps aux | grep 'tor -socksport'
 	# Tor service setup now. please wait and check conection
 	# curl --socks5 localhost:9001 http://ipinfo.io/
 
